@@ -7,10 +7,21 @@ package com.example.danil.geoquiz;
 public class Question {
     private int mTextResid;
     private boolean mAnswerTrue;
+    private boolean mIsCheat;
 
     public Question(int textResid, boolean answerTrue) {
         mTextResid = textResid;
         mAnswerTrue = answerTrue;
+        mIsCheat = false;
+    }
+
+
+    public boolean isCheat() {
+        return mIsCheat;
+    }
+
+    public void setCheat(boolean cheat) {
+        mIsCheat = cheat;
     }
 
     public int getTextResid() {
